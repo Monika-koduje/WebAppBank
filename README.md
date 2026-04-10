@@ -1,7 +1,5 @@
 # WebBankApp
 
-Project  -> [HERE](https://monika-koduje.github.io/WebAppBank/) <-  is created with:
-
 ASP.NET / C#  
 Razor Pages / MVC  
 HTML  
