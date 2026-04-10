@@ -2,11 +2,11 @@
 
 Project  -> [HERE](https://monika-koduje.github.io/WebAppBank/) <-  is created with:
 
-ASP.NET / C#
-Razor Pages / MVC
-HTML
-CSS
-JSON configuration
+ASP.NET / C#  
+Razor Pages / MVC  
+HTML  
+CSS  
+JSON configuration  
 
 for WSB studies, specialization Business Application Developer
 
