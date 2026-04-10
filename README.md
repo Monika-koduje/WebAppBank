@@ -10,6 +10,11 @@ for WSB studies, specialization Business Application Developer
 
 *Demo project for portfolio purposes. Any resemblance to real companies, brands, or individuals is purely coincidental.
 
+## How to run
+1. Clone repository
+2. Open in Visual Studio
+3. Run project
+
 Source: 
 
 https://fonts.google.com
