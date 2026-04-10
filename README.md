@@ -1,4 +1,4 @@
-# Shop_GOOD_Clothes
+# WebBankApp
 
 Project  -> [HERE](https://monika-koduje.github.io/WebAppBank/) <-  is created with:
 
