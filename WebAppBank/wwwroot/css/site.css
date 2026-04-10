@@ -1,0 +1,90 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+nav .nav-wrapper i {
+    line-height: 2.5rem !important;
+}
+
+img.logo {
+    border-radius: 50%;
+    width: 47%;
+    margin-left: 3vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul:not(.browser-default) {
+    padding-left: 20vh !important;
+}
+
+nav .brand-logo {
+    padding: 1vh !important;
+}
+
+a[b-d99gni16ez] {
+    color: white !important;
+}
+
+nav ul a.btn {
+    box-shadow: none !important;
+}
+
+.nav-extended {
+    position: fixed;
+    z-index: 100000000000000000;
+}
+
+.container {
+    margin-top: 7vh !important;
+}
+
+.val {
+    margin-bottom: 7vh !important;
+}
+
+.sec {
+    margin-top: 7vh !important;
+}
+
+.img {
+    width: 40%;
+}
+
+.img2 {
+    width: 76%;
+}
+
+.nav-wrapper .btn i {
+    color: white !important;
+}
+
+.img4 {
+    max-width: 50% !important;
+}
+
+h1 {
+    cursor: pointer;
+}
+
+nav.nav-extended .nav-wrapper {
+    min-height: 0px;
+}

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Company.Data.Data.Employee>
+
+@{
+    ViewData["Title"] = "Employees";
+    var groupedEmployees = Model?.GroupBy(e => e.Position).OrderBy(g => g.Key);
+}
+
+<div class="container">
+    <h1 class="header center indigo-text text-darken-3" id="Employees">Konsultanci</h1>
+    <div class="row center">
+        <h5 class="grey-text text-darken-1">Data modyfikacji: @DateTime.Now.ToString("dd-MM-yyyy HH:mm")</h5>
+        <h6 class="grey-text text-darken-2">W razie problemów skontaktuj się z nami, udzielimy porady.</h6>
+    </div>
+</div>
+
+<!-- Employee of the Month -->
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel teal lighten-4">
+                <h5 class="center indigo-text text-darken-3">Pracownik Miesiąca</h5>
+                @if (Model != null && Model.Any())
+                {
+                    var employeeOfTheMonth = Model.FirstOrDefault();
+                    if (employeeOfTheMonth != null)
+                    {
+                        <div class="center">
+                            <i class="fas fa-user-tie fa-5x indigo-text text-darken-3"></i>
+                            <h6><strong>@employeeOfTheMonth.FirstName @employeeOfTheMonth.LastName</strong></h6>
+                            <p><i class="fas fa-trophy"></i> @employeeOfTheMonth.Position</p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Employees Section -->
+<div class="section">
+    @if (groupedEmployees != null && groupedEmployees.Any())
+    {
+        @foreach (var group in groupedEmployees)
+        {
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="center indigo-text text-darken-3">@group.Key</h5>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var employee in group)
+                {
+                    <div class="col s12 m4">
+                        <div class="card hoverable z-depth-3">
+                            <div class="card-content center">
+                                <i class="fas fa-user fa-3x indigo-text text-darken-3"></i>
+                                <span class="card-title indigo-text text-darken-3"><strong>@employee.FirstName @employee.LastName</strong></span>
+                                <p><i class="fas fa-briefcase"></i> @employee.Position</p>
+@*                                 <p><i class="fas fa-map-marker-alt"></i> @employee.Branch</p> *@
+                                <p><i class="fas fa-phone"></i> @employee.Phone</p>
+                            </div>
+                            <div class="card-action center">
+                                <a href="tel:@employee.Phone" class="btn-small indigo lighten-1 waves-effect waves-light">Zadzwoń</a>
+                                <a href="#" class="btn-small grey lighten-1 waves-effect waves-light">Więcej</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel yellow lighten-4">
+                    <p class="center grey-text text-darken-2">Brak dostępnych danych o pracownikach.</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Add Font Awesome and Materialize CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

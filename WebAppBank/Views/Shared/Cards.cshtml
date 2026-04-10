@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Company.Data.Data.CardType>
+
+@{
+    ViewData["Title"] = "Cards";
+}
+
+<div class="container">
+    <h1 class="header center indigo-text text-darken-3" id="Cards">Nasze Karty</h1>
+    <div class="row center">
+        <h5>
+            Data modyfikacji: @DateTime.Now.ToString("dd-MM-yyyy HH:mm")
+        </h5>
+        <h6 class="grey-text text-darken-1 center">Zapoznaj się z naszymi produktami, które oferujemy dla Ciebie.</h6>
+    </div>
+</div>
+
+<!-- Karty Section -->
+<div class="section sec">
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable z-depth-4" style="background-color: #f3f3f3; border-radius: 10px; padding: 20px;">
+                        <div class="card-content">
+                            <!-- Ikona reprezentująca kartę -->
+                            <div class="center">
+                                <i class="fas fa-credit-card fa-4x indigo-text text-darken-3"></i>
+                            </div>
+                            <span class="card-title indigo-text text-darken-4" style="font-size: 1.5rem; font-weight: bold;">@item.Name</span>
+                            <p style="font-size: 1rem; color: #555;">@item.Description</p>
+                        </div>
+                        <div class="card-action center">
+                            <!-- Przycisk z animacją -->
+                            <a href="#" class="btn-small indigo lighten-1 waves-effect waves-light hoverable">Więcej informacji</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel yellow lighten-4">
+                    <p class="center grey-text text-darken-2">Brak dostępnych kart do wyświetlenia.</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Add Font Awesome and Materialize CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -1,0 +1,21 @@
+﻿@* @model Company.Data.Data.CMS.News
+
+@{
+    ViewData["Title"] = "News";
+}
+
+<div class="container">
+    <h1 class="header center indigo-text text-darken-3">@Model.Title</h1>
+    <div class="row center">
+    <h5>
+        @Model.Content
+        <br/>
+        Data modyfikacji: @DateTime.Now.ToString()
+    </h5>
+    <p class="grey-text text-darken-1 center">Bądź na bieżąco z najnowszymi informacjami i wydarzeniami.</p>
+    </div>
+</div>
+
+
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> *@

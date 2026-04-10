@@ -1,0 +1,65 @@
+﻿@model Company.Data.Data.CardType
+
+@{
+    ViewData["Title"] = "Edit Type of Card";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-credit-card"></i> Edit Card Type
+    </h1>
+    <p class="lead">Modify the details of the selected card type.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-warning text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-edit"></i> Edit Card Type
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdCardType" />
+
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">
+                        <i class="fas fa-tag"></i> @Html.DisplayNameFor(model => model.Name)
+                    </label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <!-- Description Field -->
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">
+                        <i class="fas fa-info-circle"></i> @Html.DisplayNameFor(model => model.Description)
+                    </label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <!-- Save Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

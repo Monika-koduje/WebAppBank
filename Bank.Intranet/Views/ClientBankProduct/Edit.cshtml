@@ -1,0 +1,80 @@
+﻿@model Company.Data.Data.ClientBankProduct
+
+@{
+    ViewData["Title"] = "Edit Client Bank Product";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-edit"></i> Edit Client Bank Product
+    </h1>
+    <p class="lead">Modify the details of the client’s associated bank product.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-warning text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-pencil-alt"></i> Edit Client Bank Product
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdClientProduct" />
+
+                <!-- Client Selection -->
+                <div class="form-group">
+                    <label asp-for="IdClient" class="control-label">
+                        <i class="fas fa-user"></i> @Html.DisplayNameFor(model => model.Client)
+                    </label>
+                    <select asp-for="IdClient" class="form-control" asp-items="ViewBag.IdClient"></select>
+                    <span asp-validation-for="IdClient" class="text-danger"></span>
+                </div>
+
+                <!-- Product Selection -->
+                <div class="form-group">
+                    <label asp-for="IdProduct" class="control-label">
+                        <i class="fas fa-cogs"></i> @Html.DisplayNameFor(model => model.BankProduct)
+                    </label>
+                    <select asp-for="IdProduct" class="form-control" asp-items="ViewBag.IdProduct"></select>
+                    <span asp-validation-for="IdProduct" class="text-danger"></span>
+                </div>
+
+                <!-- Acquired Date -->
+                <div class="form-group">
+                    <label asp-for="AcquiredDate" class="control-label">
+                        <i class="fas fa-calendar-alt"></i> @Html.DisplayNameFor(model => model.AcquiredDate)
+                    </label>
+                    <input asp-for="AcquiredDate" class="form-control" type="date" />
+                    <span asp-validation-for="AcquiredDate" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to List Button -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

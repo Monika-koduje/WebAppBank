@@ -1,0 +1,79 @@
+﻿@model Company.Data.Data.BankProduct
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-cogs"></i> Create Bank Product
+    </h1>
+    <p class="lead">Fill out the form below to create a new bank product.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-plus-circle"></i> Add New Product
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- ProductName -->
+                <div class="form-group">
+                    <label asp-for="ProductName" class="control-label">
+                        <i class="fas fa-box"></i> @Html.DisplayNameFor(model => model.ProductName)
+                    </label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">
+                        <i class="fas fa-info-circle"></i> @Html.DisplayNameFor(model => model.Description)
+                    </label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <!-- ProductType -->
+                <div class="form-group">
+                    <label asp-for="ProductType" class="control-label">
+                        <i class="fas fa-tags"></i> @Html.DisplayNameFor(model => model.ProductType)
+                    </label>
+                    <input asp-for="ProductType" class="form-control" />
+                    <span asp-validation-for="ProductType" class="text-danger"></span>
+                </div>
+
+                <!-- InterestRate -->
+                <div class="form-group">
+                    <label asp-for="InterestRate" class="control-label">
+                        <i class="fas fa-percent"></i> @Html.DisplayNameFor(model => model.InterestRate)
+                    </label>
+                    <input asp-for="InterestRate" class="form-control" />
+                    <span asp-validation-for="InterestRate" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to List Link -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

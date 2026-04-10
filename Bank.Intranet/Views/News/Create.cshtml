@@ -1,0 +1,77 @@
+﻿@model Company.Data.Data.CMS.News
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-newspaper"></i> Create News
+    </h1>
+    <p class="lead">Fill out the form below to add a new article to the system.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-plus-circle"></i> Add News Article
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Link Title -->
+                <div class="form-group">
+                    <label asp-for="LinkTitle" class="control-label">
+                        <i class="fas fa-link"></i> @Html.DisplayNameFor(model => model.LinkTitle)
+                    </label>
+                    <input asp-for="LinkTitle" class="form-control" />
+                    <span asp-validation-for="LinkTitle" class="text-danger"></span>
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label">
+                        <i class="fas fa-heading"></i> @Html.DisplayNameFor(model => model.Title)
+                    </label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Content -->
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label">
+                        <i class="fas fa-file-alt"></i> @Html.DisplayNameFor(model => model.Content)
+                    </label>
+                    <textarea asp-for="Content" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+
+                <!-- Display Order -->
+                <div class="form-group">
+                    <label asp-for="DisplayOrder" class="control-label">
+                        <i class="fas fa-sort"></i> @Html.DisplayNameFor(model => model.DisplayOrder)
+                    </label>
+                    <input asp-for="DisplayOrder" class="form-control" />
+                    <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to List Link -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

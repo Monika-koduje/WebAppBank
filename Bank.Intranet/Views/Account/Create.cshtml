@@ -1,0 +1,73 @@
+﻿@model Company.Data.Data.Account
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+        <h1 class="text-primary">
+        <i class="fas fa-plus-circle"></i> Create Account
+    </h1>
+    <p class="lead">Please fill in the details below to create a new account.</p>
+
+    <div class="card shadow-sm mb-4">
+            <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-clipboard-list"></i> Create Account Details
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Account Number -->
+                <div class="form-group">
+                    <label asp-for="AccountNumber" class="control-label">
+                        <i class="fas fa-hashtag"></i> @Html.DisplayNameFor(model => model.AccountNumber)
+                    </label>
+                    <input asp-for="AccountNumber" class="form-control" />
+                    <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                </div>
+
+                <!-- Balance -->
+                <div class="form-group">
+                    <label asp-for="Balance" class="control-label">
+                        <i class="fas fa-wallet"></i> @Html.DisplayNameFor(model => model.Balance)
+                    </label>
+                    <input asp-for="Balance" class="form-control" />
+                    <span asp-validation-for="Balance" class="text-danger"></span>
+                </div>
+
+                <!-- Client Selection -->
+                <div class="form-group">
+                    <label asp-for="IdClient" class="control-label">
+                        <i class="fas fa-user"></i> @Html.DisplayNameFor(model => model.IdClient)
+                    </label>
+                    <select asp-for="IdClient" class="form-control" asp-items="ViewBag.IdClient"></select>
+                    <span asp-validation-for="IdClient" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to List Link -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+                    

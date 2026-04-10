@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bank DOBRY START</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebAppBank.styles.css" asp-append-version="true" />
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link href="~/lib/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="icon" href="~/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-extended indigo darken-4">
+    <div class="nav-wrapper">
+@*         <a href="/" class="brand-logo"><img class="logo" src="~/image/logo2.jpg" alt="Logo" style="max-width: 300px; margin-top: 10px; margin-left: 10px;" /></a>
+ *@        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+     
+            <li><a class="btn waves-effect waves-light indigo darken-4" asp-controller="Home" asp-action="About"><i class="fas fa-info-circle"></i></a></li>
+   
+            <li><a class="btn waves-effect waves-light indigo darken-4" asp-controller="Home" asp-action="Contact"><i class="fas fa-phone"></i></a></li>
+        
+            <li><a class="btn waves-effect waves-light indigo darken-4" asp-controller="Home" asp-action="Privacy"><i class="fas fa-lock"></i></a></li>
+            <li><a class="btn waves-effect waves-light indigo darken-4 dropdown-trigger" href="#!" data-target="dropdown1"><i class="fas fa-user-circle"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Navigation Bar -->
+
+    @await Html.PartialAsync("NavLinks", (IEnumerable<Company.Data.Data.CMS.Page>)ViewBag.ModelPages)
+
+
+    </nav>
+
+@*     <nav class="nav-extended indigo darken-4">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo"><img class="logo" src="~/image/logo2.jpg" alt="Logo" style="max-width: 300px; margin-top: 10px; margin-left: 10px;" /></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="btn waves-effect waves-light indigo darken-4" asp-controller="Home" asp-action="About"><i class="fas fa-info-circle"></i></a></li>
+                <li><a class="btn waves-effect waves-light indigo darken-4" asp-controller="Home" asp-action="Contact"><i class="fas fa-phone"></i></a></li>
+                <li><a class="btn waves-effect waves-light indigo darken-4" asp-controller="Home" asp-action="Privacy"><i class="fas fa-lock"></i></a></li>
+                <li><a class="btn waves-effect waves-light indigo darken-4 dropdown-trigger" href="#!" data-target="dropdown1"><i class="fas fa-user-circle"></i></a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+    <li class="tab"><a href="#cards">Karty</a></li>
+    <li class="tab"><a href="#offerts" class="active">Oferty</a></li>
+    <li class="tab"><a href="#news">Nowości</a></li>
+    <li class="tab"><a href="#promotions">Promocje</a></li>
+    <li class="tab"><a href="#branches">Odziały</a></li>
+    <li class="tab"><a href="#employees">Konsultanci</a></li>
+            </ul>
+        </div>
+    </nav> *@
+
+    <!-- Dropdown Structure -->
+@*     <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#">Zaloguj się</a></li>
+        <li><a href="#">Zarejestruj się</a></li>
+        <li><a href="#">Zmiana danych</a></li>
+    </ul> *@
+
+    <!-- Mobile Menu -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">O nas</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Polityka</a></li>
+        <li><a href="#">Nowości</a></li>
+    </ul>
+
+    <!-- Main Content -->
+    <div class="section" id="index-banner">
+        @RenderBody()
+    </div>
+
+    <!-- News -->
+    <div id="News"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("News", (IEnumerable<Company.Data.Data.CMS.News>)ViewBag.ModelNews)
+
+    <!-- Offers -->
+    <div id="Products"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Offers", (IEnumerable<Company.Data.Data.BankProduct>)ViewBag.ModelBankProduct)
+
+    <!-- Employees -->
+    <div id="Employees"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Employees", (IEnumerable<Company.Data.Data.Employee>)ViewBag.ModelEmployee)
+
+    <!-- Cards -->
+    <div id="Cards"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Cards", (IEnumerable<Company.Data.Data.CardType>)ViewBag.ModelCardType)
+
+    <!-- Promotions/Notifications -->
+    <div id="Notifications"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Promotions", (IEnumerable<Company.Data.Data.Notification>)ViewBag.ModelNotification)
+
+    <!-- Branches -->
+    <div id="Branches"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Branches", (IEnumerable<Company.Data.Data.Branch>)ViewBag.ModelBranch)
+
+    <!-- O nas -->
+    <div id="About"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("About", (IEnumerable<Company.Data.Data.AboutPageSection>)ViewBag.ModelAbout)
+
+    <!-- Kontakt -->
+    <div id="Contact"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Contact", (IEnumerable<Company.Data.Data.ContactPageSection>)ViewBag.ModelContact)
+
+    <!-- Polityka Prywatności -->
+    <div id="Privacy"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @await Html.PartialAsync("Privacy", (IEnumerable<Company.Data.Data.PolicyPageSection>)ViewBag.ModelPrivacy)
+
+
+@*  @await Html.PartialAsync("About", (IEnumerable<Company.Data.Data.AboutPageSection>)ViewBag.ModelAbout)
+    @await Html.PartialAsync("Contact", (IEnumerable<Company.Data.Data.ContactPageSection>)ViewBag.ModelContact)
+    @await Html.PartialAsync("Privacy", (IEnumerable<Company.Data.Data.PolicyPageSection>)ViewBag.ModelPrivacy) *@
+
+    <!-- Credit Card Offers Section -->
+    <div class="section sec">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card-panel center hoverable z-depth-3">
+                    <i class="fas fa-credit-card large blue-text"></i>
+                    <h5>Premium Kredyt</h5>
+                    <p>Korzyści premium, wyjątkowe oprocentowanie, idealne dla wymagających.</p>
+                    <a href="#" class="btn-small waves-effect waves-light indigo hoverable">Zobacz więcej</a>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card-panel center hoverable z-depth-3">
+                    <i class="fas fa-home large blue-text"></i>
+                    <h5>Nowy Dom</h5>
+                    <p>Oferty kredytowe dla osób planujących zakup nowego domu.</p>
+                    <a href="#" class="btn-small waves-effect waves-light indigo hoverable">Zobacz więcej</a>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card-panel center hoverable z-depth-3">
+                    <i class="fas fa-money-bill-wave large blue-text"></i>
+                    <h5>Bez Limitów</h5>
+                    <p>Wybierz ofertę bez limitów i korzystaj z pełnej swobody finansowej.</p>
+                    <a href="#" class="btn-small waves-effect waves-light indigo hoverable">Zobacz więcej</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <footer class="page-footer indigo darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4 l3">
+                    <h5 class="white-text">Bank DOBRY START</h5>
+                    <p class="grey-text text-lighten-4">Firma DOBRY START Sp. z o.o.<br>ul. Test 1, 00-000 Test, Test</p>
+                </div>
+                <div class="col s12 m4 l3">
+                    <h5 class="white-text">Godziny pracy</h5>
+                    <p class="grey-text text-lighten-4">Poniedziałek – Piątek: 8:00 – 18:00<br>Sobota: 10:00 – 14:00<br>Niedziela: Zamknięte</p>
+                </div>
+                <div class="col s12 m4 l3">
+                    <h5 class="white-text">Dane do przelewów bankowych</h5>
+                    <p class="grey-text text-lighten-4">Bank: Bank DOBRY START SA<br>Numer konta: 00 0000 0000 0000 0000 0000 0000<br>SWIFT/BIC: TESTST</p>
+                </div>
+                <div class="col s12 l3">
+                    <h5 class="white-text">Znajdź nas</h5>
+                    <a href="#" class="btn-floating btn-large indigo"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn-floating btn-large blue"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn-floating btn-large pink"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn-floating btn-large red"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Bank DOBRY START &copy; 2024
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/materialize/js/materialize.js"></script>
+    <script src="~/lib/materialize/js/materialize.min.js"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                $('.sidenav').sidenav();
+                $('.dropdown-trigger').dropdown();
+                $('.tabs').tabs();
+            });
+        })(jQuery);
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Znajdź wszystkie linki nawigacji
+            const navLinks = document.querySelectorAll('.tabs a[data-target]');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    // Pobierz wartość data-target
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Zapobiegaj domyślnej nawigacji
+                        event.preventDefault();
+
+                        // Przewiń do odpowiedniego elementu
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

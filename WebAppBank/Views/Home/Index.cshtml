@@ -1,0 +1,161 @@
+﻿@model Company.Data.Data.CMS.Page
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!-- Główna sekcja zawartości -->
+<div class="container">
+    <!-- Nagłówek -->
+    <br /><br />
+    <div class="row">
+        <div class="col s12">
+            <h2 class="header center black-text wow fadeInUp" data-wow-delay="0.3s">Zapraszamy do korzystania z ofert naszego Banku</h2>
+        </div>
+
+    </div>
+
+    <!-- Podtytuł -->
+    <div class="row center">
+        <div class="col s12">
+            <h5 class="header col s12 light grey-text text-darken-2 wow fadeInUp" data-wow-delay="0.5s">U nas masz to jak w banku!</h5>
+            <br /><br /><br/><br/>
+            <img src="~/image/imgcards.png" />
+        </div>
+
+    </div>
+    <br/>
+    <!-- Przycisk wezwania do działania -->
+    <div class="row center">
+        <a href="#" id="download-button" class="btn-large waves-effect waves-light indigo darken-3 hoverable wow fadeInUp" data-wow-delay="0.7s">
+            <i class="fas fa-user-circle left"></i> Załóż konto
+        </a>
+    </div>
+    <br /><br /><br />
+    <!-- Dodatkowe informacje -->
+    <div class="row wow fadeInUp" data-wow-delay="0.9s">
+        <div class="col s12 m6 l4">
+            <div class="card-panel center hoverable">
+                <i class="fas fa-money-bill-wave fa-3x indigo-text"></i>
+                <h5 class="indigo-text">Kredyty</h5>
+                <p>Oferta dopasowana do Twoich potrzeb. Sprawdź nasze warunki kredytowe.</p>
+                <a href="#" class="btn-small waves-effect waves-light indigo">Dowiedz się więcej</a>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card-panel center hoverable">
+                <i class="fas fa-credit-card fa-3x indigo-text"></i>
+                <h5 class="indigo-text">Karty</h5>
+                <p>Wybierz idealną kartę dla siebie z naszej szerokiej oferty.</p>
+                <a href="#" class="btn-small waves-effect waves-light indigo">Dowiedz się więcej</a>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card-panel center hoverable">
+                <i class="fas fa-briefcase fa-3x indigo-text"></i>
+                <h5 class="indigo-text">Usługi biznesowe</h5>
+                <p>Zoptymalizuj finanse swojej firmy z pomocą naszych usług.</p>
+                <a href="#" class="btn-small waves-effect waves-light indigo">Dowiedz się więcej</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sekcja z tłem (pełnoekranowe tło) -->
+<section class="section" style="background-image: url('~/image/bank-background.jpg'); background-size: cover; background-position: center; padding: 100px 0; color: white; text-align: center;">
+    <div class="container">
+        <h3 class="white-text wow fadeInUp" data-wow-delay="0.5s">Dołącz do Banku DOBRY START i skorzystaj z wyjątkowych ofert!</h3>
+        <a href="#" class="btn-large waves-effect waves-light white indigo-text text-darken-4 hoverable wow fadeInUp" data-wow-delay="0.7s">
+            <i class="fas fa-star left"></i> Sprawdź oferty
+        </a>
+    </div>
+</section>
+
+<!-- Sekcja motywacyjna (promowanie oferty) -->
+<section class="section grey lighten-4">
+    <div class="container">
+        <h4 class="center indigo-text">Dlaczego warto wybrać Bank DOBRY START?</h4>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card-panel center hoverable">
+                    <i class="fas fa-shield-alt fa-3x indigo-text"></i>
+                    <h5 class="indigo-text">Bezpieczeństwo</h5>
+                    <p>Gwarantujemy pełną ochronę Twoich danych i środków.</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card-panel center hoverable">
+                    <i class="fas fa-headset fa-3x indigo-text"></i>
+                    <h5 class="indigo-text">Obsługa klienta</h5>
+                    <p>Nasza pomoc jest dostępna 24/7, gotowa rozwiązać każdy problem.</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card-panel center hoverable">
+                    <i class="fas fa-chart-line fa-3x indigo-text"></i>
+                    <h5 class="indigo-text">Innowacyjne usługi</h5>
+                    <p>Nowoczesne narzędzia online, które ułatwią zarządzanie finansami.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekcja opinii klientów -->
+<section class="section">
+    <div class="container">
+        <h4 class="center indigo-text">Opinie naszych klientów</h4>
+        <div class="row">
+            <div class="col s12 m6 l4">
+                    <p>"Bank DOBRY START to najlepszy wybór! Szybka obsługa i świetne oferty kredytowe."</p>
+                <footer>- User1 Testowy</footer>
+                </blockquote>
+            </div>
+            <div class="col s12 m6 l4">
+                <blockquote class="center">
+                    <p>"Dzięki bankowi zaoszczędziłem sporo czasu i pieniędzy. Polecam każdemu!"</p>
+                    <footer>- User2 Testowy</footer>
+                </blockquote>
+            </div>
+            <div class="col s12 m6 l4">
+                <blockquote class="center">
+                    <p>"Profesjonalizm i świetna obsługa. Zawsze czuję się bezpiecznie, korzystając z ich usług."</p>
+                    <footer>- User3 Testowy</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Stopka -->
+<footer class="page-footer indigo darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="white-text">Bank DOBRY START</h5>
+                <p class="grey-text text-lighten-4">Skorzystaj z naszej oferty i znajdź najlepsze rozwiązanie finansowe dla siebie.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Skrypty (Wow.js do animacji) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="~/lib/materialize/js/materialize.js"></script>
+<script>
+    new WOW().init();
+
+    (function ($) {
+        $(function () {
+            // Inicjalizacja komponentów Materialize
+        });
+    })(jQuery);
+</script>
+
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

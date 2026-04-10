@@ -1,0 +1,78 @@
+﻿@model Company.Data.Data.Transaction
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-exchange-alt"></i> Create Transaction
+    </h1>
+    <p class="lead">Fill out the form below to create a new transaction.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-plus-circle"></i> Add New Transaction
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- IdAccount -->
+                <div class="form-group">
+                    <label asp-for="IdAccount" class="control-label">
+                        <i class="fas fa-university"></i> @Html.DisplayNameFor(model => model.IdAccount)
+                    </label>
+                    <select asp-for="IdAccount" class="form-control" asp-items="ViewBag.IdAccount"></select>
+                    <span asp-validation-for="IdAccount" class="text-danger"></span>
+                </div>
+
+                <!-- Amount -->
+                <div class="form-group">
+                    <label asp-for="Amount" class="control-label">
+                        <i class="fas fa-money-bill-wave"></i> @Html.DisplayNameFor(model => model.Amount)
+                    </label>
+                    <input asp-for="Amount" class="form-control" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+
+                <!-- TransactionDate -->
+                <div class="form-group">
+                    <label asp-for="TransactionDate" class="control-label">
+                        <i class="fas fa-calendar-alt"></i> @Html.DisplayNameFor(model => model.TransactionDate)
+                    </label>
+                    <input asp-for="TransactionDate" class="form-control" />
+                    <span asp-validation-for="TransactionDate" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">
+                        <i class="fas fa-pencil-alt"></i> @Html.DisplayNameFor(model => model.Description)
+                    </label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to List Link -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

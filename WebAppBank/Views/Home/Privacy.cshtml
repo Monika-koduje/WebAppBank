@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Company.Data.Data.PolicyPageSection>  // Definicja typu modelu
+
+@{
+    ViewData["Title"] = "Polityka Prywatności";
+}
+
+<div class="container">
+    <!-- Sekcja nagłówka -->
+    <br><br>
+    <h1 id="Privacy" class="header center indigo-text text-darken-3">@ViewData["Title"]</h1>
+    <br><br>
+
+    <!-- Renderowanie sekcji z PolicyPageSection -->
+    <div class="section">
+        @if (Model != null && Model.Any())  // Sprawdzamy, czy model nie jest pusty
+        {
+            @foreach (var item in Model)  // Przechodzimy przez każdą sekcję
+            {
+                @if (item.IsActive)  // Sprawdzamy, czy sekcja jest aktywna
+                {
+                    <!-- Dynamiczna sekcja -->
+                    <div class="card-panel indigo lighten-5">
+                        <h5 class="indigo-text text-darken-3">
+                            <i class="@item.IconClass left"></i><b>@item.SectionName</b>
+                        </h5>
+
+                        <!-- Wyświetlanie surowego HTML zawartego w Content -->
+                        <p class="grey-text text-darken-2">@Html.Raw(item.Content)</p>
+
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))  // Sprawdzamy, czy URL obrazka jest niepusty
+                        {
+                            <img src="@item.ImageUrl" class="responsive-img" />
+                        }
+
+                        <!-- Debugowanie lub generowanie linków z użyciem Id -->
+                        <p class="grey-text text-darken-3"><i>Id: @item.Id</i></p>
+                    </div>
+                }
+            }
+        }
+        else
+        {
+            <div class="card-panel indigo lighten-5">
+                <h5 class="indigo-text text-darken-3">Brak dostępnych informacji.</h5>
+                <p class="grey-text text-darken-2">Przepraszamy, brak danych do wyświetlenia.</p>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

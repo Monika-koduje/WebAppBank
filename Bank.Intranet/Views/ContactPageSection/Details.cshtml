@@ -1,0 +1,89 @@
+﻿@model Company.Data.Data.ContactPageSection
+
+@{
+    ViewData["Title"] = "Contact Page Section Details";
+}
+
+<!-- Sekcja szczegółów z ograniczoną szerokością -->
+<section class="table-section">
+
+    <div class="container mt-5">
+        <h1 class="text-primary">
+            <i class="fas fa-address-card"></i> Contact Page Section Details
+        </h1>
+        <p class="lead">Here are the details for the selected contact page section.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-info-circle"></i> Section Information
+                </h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <!-- Section Name -->
+                    <dt class="col-sm-2">
+                        <i class="fas fa-heading"></i> @Html.DisplayNameFor(model => model.SectionName)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.SectionName)
+                    </dd>
+
+                    <!-- Content -->
+                    <dt class="col-sm-2">
+                        <i class="fas fa-paragraph"></i> @Html.DisplayNameFor(model => model.Content)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Content)
+                    </dd>
+
+                    <!-- Image URL -->
+                    <dt class="col-sm-2">
+                        <i class="fas fa-image"></i> @Html.DisplayNameFor(model => model.ImageUrl)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.ImageUrl)
+                    </dd>
+
+                    <!-- Icon Class -->
+                    <dt class="col-sm-2">
+                        <i class="fas fa-icons"></i> @Html.DisplayNameFor(model => model.IconClass)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.IconClass)
+                    </dd>
+
+                    <!-- Order -->
+                    <dt class="col-sm-2">
+                        <i class="fas fa-sort"></i> @Html.DisplayNameFor(model => model.Order)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Order)
+                    </dd>
+
+                    <!-- Is Active -->
+                    <dt class="col-sm-2">
+                        <i class="fas fa-toggle-on"></i> @Html.DisplayNameFor(model => model.IsActive)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.IsActive)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-between align-items-center">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-warning">
+                <i class="fas fa-edit"></i> Edit
+            </a>
+            <a asp-action="Index" class="btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

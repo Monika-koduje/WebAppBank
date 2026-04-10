@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    --bs-font-sans-serif: none;
+    font-size: 14px;
+    background-color: #e0f2f1;
+    position: relative;
+    min-height: 100%;
+    font-family: "Roboto", serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-family: "Roboto", serif;
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #e0f2f1;
+    line-height: normal;
+}
+
+.nav-val {
+
+}
+
+h2 {
+    margin: 30px;
+}
+
+footer {
+    background-color: #009688;
+    color: white;
+}
+
+.container-fluid {
+    background-color: #009688;
+    color: white;
+    padding: 20px;
+}
+
+header {
+    background-color: #009688;
+    color: white;
+}
+
+p a, .btn-primary {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border: 1px solid #006064;
+    background-color: #006064;
+    padding: 10px 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+td a, .btn-secondary, .btn-success, .btn-primary, .btn-warning {
+    text-decoration: none !important;
+    display: inline-block !important;
+    color: white !important;
+    border: 1px solid #006064 !important;
+    background-color: #006064 !important;
+    padding: 5px 10px !important;
+    margin-top: 5px !important;
+    margin-right: 5px !important;
+}
+
+p a:hover {
+    background-color: white;
+    color: black;
+}
+
+td a:hover, .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, btn-warning:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-primary{
+    margin-bottom: 2vh;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+    color: white;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+}
+
+.display-4 {
+    font-size: calc(-0.525rem + 2.7vw);
+}
+
+div a {
+    text-decoration: none;
+}
+
+h4 {
+    margin-top: 3vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:hover {
+        color: white;
+    }
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: white;
+}
+
+.navbar-brand {
+    padding: .3125rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: center;
+    border: 6px double white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand:hover {
+    background-color: white;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-item:hover {
+    color: white !important;
+}
+
+.copy {
+    color: white !important;
+}
+
+footer div.container {
+    color: white;
+    overflow: hidden;
+    padding-left: 5vh;
+}
+
+.image {
+    background-size: cover;
+    background-position-x: 50%; /* Wyœrodkowanie t³a w poziomie */
+    background-position-y: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 43vh;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 5vh;
+    margin-bottom: 3.5vh;
+}
+
+.container {
+    overflow: hidden;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.border-top {
+    border-top: 1px solid #009688 !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* Zmiana koloru t³a elementów w rozwijanej liœcie */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: #009688 !important;
+    color: white !important;
+}
+
+
+/* Sekcja ikon */
+.icons-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11vh; /* Odstêp miêdzy ikonami */
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Ciemnoszary kolor */
+    margin-bottom: 3vh;
+}
+
+    .icon-link i {
+        font-size: 40px; /* Rozmiar ikon */
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* Zmiana koloru ikon przy najechaniu */
+    .icon-link:hover i {
+        color: #006064; /* Kolor niebieski przy najechaniu */
+    }
+
+
+
+
+
+
+
+
+/* Wyœrodkowanie sekcji */
+.table-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Stylowanie nag³ówka strony */
+h1 {
+    color: #006064;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 18vh;
+}
+
+/* Stylowanie przycisku "Create New" */
+.btn-primary {
+    background-color: #006064;
+    border-color: #006064;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+    .btn-primary:hover {
+        color: black;
+        border-color: #006064;
+    }
+
+/* Stylowanie tabeli */
+.table {
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 10vh;
+}
+
+    .table th {
+        background-color: #006064;
+        color: white;
+        font-weight: bold;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    /* Zmiana koloru komórek przy najechaniu */
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+/* Stylowanie przycisków akcji */
+.btn {
+    border-radius: 50%;
+    padding: 3px 8px;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+.btn:hover {
+    background-color: white !important;
+    border-color: white !important;
+}
+
+/* Zmiana koloru ikon przy najechaniu */
+.btn i {
+    transition: color 0.3s;
+}
+
+.btn:hover i {
+    color: black;
+}
+
+tr {
+    border-color: black;
+    text-align: center;
+}
+
+th {
+    border-color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between; /* Rozci¹ga elementy na ca³¹ dostêpn¹ szerokoœæ */
+    align-items: center; /* Wyrównuje elementy w pionie na œrodku */
+}
+
+.text-center {
+    background-color: #0096883b;
+    padding-top: 16vh;
+    padding-bottom: 3vh;
+}
+
+
+
+.text-center h1 {
+    margin: 0 auto; /* Usuwa domyœlny margines wokó³ h1 i utrzymuje go na œrodku */
+}
+
+.mb-0 {
+    margin-bottom: 0; /* Usuwa domyœlny margines poni¿ej <p> */
+}
+
+.mb-3 {
+    margin-bottom: 0rem !important;
+}
+
+
+.mt-3, .btn-secondary {
+    margin-bottom: 3rem;
+}
+
+
+
+.tables-description-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 30px;
+    margin-left: 9vh;
+}
+
+.table-description {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-bottom: 1vh;
+}
+
+    .table-description:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-description i {
+        font-size: 36px;
+        color: #006064;
+        margin-bottom: 15px;
+    }
+
+    .table-description h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .table-description p {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .table-description:active {
+        transform: translateY(1px);
+    }
+
+h3 {
+    margin-bottom: 2.5rem;
+}
+
+.box-shadow[b-4sk30olkvs] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-color: #009688 !important;
+    position: fixed;
+    width: 100vw;
+    z-index: 10000000000000
+}
+
+.table-section {
+    margin-top: 18vh;
+}
+
+.section-m {
+    margin-top: 7vh;
+}
+
+.text-primary {
+    color: #006064 !important;
+    margin: 0;
+    margin-bottom: 4vh;
+}
+
+.bg-warning, .bg-info, .bg-success {
+    background-color: none !important;
+    background-color: #006064 !important;
+    padding: 1vh;
+    margin-bottom: 3vh;
+}
+
+.control-label {
+    margin-bottom: 1vh;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-primary {
+    border-radius: 0;
+}
+
+.form-check .form-check-input {
+    float: none;
+    margin-left: 0;
+}

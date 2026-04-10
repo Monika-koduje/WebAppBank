@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Company.Data.Data.PolicyPageSection>
+
+@foreach (var item in Model.OrderBy(x => x.Order))
+{
+    @if (item.IsActive)
+    {
+        <!-- Dynamiczna sekcja -->
+        <div class="card-panel indigo lighten-5">
+            <h5 class="indigo-text text-darken-3">
+                <i class="@item.IconClass left"></i><b>@item.SectionName</b>
+            </h5>
+            <p class="grey-text text-darken-2">@item.Content</p>
+
+            @if (!string.IsNullOrEmpty(item.ImageUrl))
+            {
+                <img src="@item.ImageUrl" class="responsive-img" />
+            }
+
+            <!-- Debugowanie lub generowanie linków z użyciem Id -->
+            <p class="grey-text text-darken-3"><i>Id: @item.Id</i></p>
+        </div>
+    }
+}

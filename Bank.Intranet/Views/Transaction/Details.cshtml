@@ -1,0 +1,72 @@
+﻿@model Company.Data.Data.Transaction
+
+@{
+    ViewData["Title"] = "Details";
+}
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-info-circle"></i> Transaction Details
+    </h1>
+    <p class="lead">Here are the details for the selected transaction.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-exchange-alt"></i> Transaction Information
+            </h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <!-- Account Number -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-credit-card"></i> @Html.DisplayNameFor(model => model.Account)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Account.AccountNumber)
+                </dd>
+
+                <!-- Amount -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-dollar-sign"></i> @Html.DisplayNameFor(model => model.Amount)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Amount)
+                </dd>
+
+                <!-- Transaction Date -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-calendar-day"></i> @Html.DisplayNameFor(model => model.TransactionDate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.TransactionDate)
+                </dd>
+
+                <!-- Description -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-info-circle"></i> @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- Edit and Back to List Links -->
+        <div class="d-flex justify-content-between align-items-center">
+        <a asp-action="Edit" asp-route-id="@Model?.IdTransaction" class="btn-warning">
+            <i class="fas fa-edit"></i> Edit Transaction
+        </a> 
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

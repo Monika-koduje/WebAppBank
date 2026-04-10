@@ -1,0 +1,190 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4"><b>System Bank DOBRY START</b></h2>
+    <br />
+    <h3>Zarządzaj informacjami o kontach, klientach, produktach, pracownikach.</h3>
+</div>
+
+<br/><br/><br/>
+
+<section class="tables-description-section">
+    <!-- Divy z opisami tabel -->
+        <div class="row">
+            <!-- Divy w rzędzie -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "News")'">
+                    <i class="fas fa-newspaper fa-2x"></i>
+                    <h4>News</h4>
+                    <p>Zarządzaj wiadomościami i aktualnościami banku.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Page")'">
+                    <i class="fas fa-file-alt fa-2x"></i>
+                    <h4>Pages</h4>
+                    <p>Zarządzaj treściami stron internetowych banku.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Card")'">
+                    <i class="fas fa-credit-card fa-2x"></i>
+                    <h4>Cards</h4>
+                    <p>Zarządzaj informacjami o kartach płatniczych.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "CardType")'">
+                    <i class="fas fa-id-card fa-2x"></i>
+                    <h4>Card Types</h4>
+                    <p>Zarządzaj rodzajami kart płatniczych.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Account")'">
+                    <i class="fas fa-university fa-2x"></i>
+                    <h4>Accounts</h4>
+                    <p>Zarządzaj rachunkami bankowymi klientów.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Client")'">
+                    <i class="fas fa-user fa-2x"></i>
+                    <h4>Clients</h4>
+                    <p>Zarządzaj danymi klientów banku.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Transaction")'">
+                    <i class="fas fa-exchange-alt fa-2x"></i>
+                    <h4>Transactions</h4>
+                    <p>Zarządzaj szczegółami transakcji klientów.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "BankProduct")'">
+                    <i class="fas fa-box fa-2x"></i>
+                    <h4>Products</h4>
+                    <p>Zarządzaj produktami oferowanymi przez bank.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "ClientBankProduct")'">
+                    <i class="fas fa-tools fa-2x"></i>
+                    <h4>Customer Products</h4>
+                    <p>Zarządzaj produktami przypisanymi do klientów.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Branch")'">
+                    <i class="fas fa-building fa-2x"></i>
+                    <h4>Branches</h4>
+                    <p>Zarządzaj oddziałami banku i ich lokalizacjami.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Employee")'">
+                    <i class="fas fa-user-tie fa-2x"></i>
+                    <h4>Employees</h4>
+                    <p>Zarządzaj danymi pracowników banku.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "Notification")'">
+                    <i class="fas fa-bell fa-2x"></i>
+                    <h4>Notifications</h4>
+                    <p>Zarządzaj powiadomieniami wysyłanymi do klientów.</p>
+                </div>
+            </div>
+                  <!-- Nowe sekcje -->
+        <div class="col-md-2 col-sm-4 mb-4">
+            <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "AboutPageSection")'">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <h4>About Page Section</h4>
+                <p>Zarządzaj sekcją informacje o nas na stronie internetowej banku.</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4 mb-4">
+            <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "ContactPageSection")'">
+                <i class="fas fa-phone-alt fa-2x"></i>
+                <h4>Contact Page Section</h4>
+                <p>Zarządzaj sekcją kontaktową strony banku.</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4 mb-4">
+            <div class="table-description text-center shadow p-3" onclick="window.location.href='@Url.Action("Index", "PolicyPageSection")'">
+                <i class="fas fa-gavel fa-2x"></i>
+                <h4>Policy Page Section</h4>
+                <p>Zarządzaj sekcją polityki strony banku.</p>
+            </div>
+        </div>
+        </div>
+</section>
+
+
+
+<section class="image">
+    <img src="~/img/img1.jpg" />
+</section>
+
+
+<section class="icons-section">
+    <!-- Home Page -->
+    <a class="icon-link" asp-area="" asp-controller="News" asp-action="Index" title="News">
+        <i class="fas fa-newspaper"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="Page" asp-action="Index" title="Page">
+        <i class="fas fa-file-alt"></i>
+    </a>
+
+    <!-- Cards -->
+    <a class="icon-link" asp-area="" asp-controller="Card" asp-action="Index" title="Cards">
+        <i class="fas fa-credit-card"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="CardType" asp-action="Index" title="Type of Cards">
+        <i class="fas fa-id-card"></i>
+    </a>
+
+    <!-- Accounts -->
+    <a class="icon-link" asp-area="" asp-controller="Account" asp-action="Index" title="Accounts">
+        <i class="fas fa-university"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="Client" asp-action="Index" title="Clients">
+        <i class="fas fa-user"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="Transaction" asp-action="Index" title="Transactions">
+        <i class="fas fa-exchange-alt"></i>
+    </a>
+
+    <!-- Products -->
+    <a class="icon-link" asp-area="" asp-controller="BankProduct" asp-action="Index" title="Products">
+        <i class="fas fa-box"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="ClientBankProduct" asp-action="Index" title="Customer Products">
+        <i class="fas fa-tools"></i>
+    </a>
+
+    <!-- Other Menu Items -->
+    <a class="icon-link" asp-area="" asp-controller="Branch" asp-action="Index" title="Branches">
+        <i class="fas fa-building"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="Employee" asp-action="Index" title="Employees">
+        <i class="fas fa-user-tie"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="Notification" asp-action="Index" title="Notifications">
+        <i class="fas fa-bell"></i>
+    </a>
+
+    <!-- Nowe sekcje -->
+    <a class="icon-link" asp-area="" asp-controller="AboutPageSection" asp-action="Index" title="About Page Section">
+        <i class="fas fa-info-circle"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="ContactPageSection" asp-action="Index" title="Contact Page Section">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="PolicyPageSection" asp-action="Index" title="Policy Page Section">
+        <i class="fas fa-gavel"></i>
+    </a>
+</section>

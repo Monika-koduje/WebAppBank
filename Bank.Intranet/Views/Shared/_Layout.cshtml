@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - System Bank DOBRY START</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Bank.Intranet.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    System Bank<br />DOBRY START
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between nav-val">
+                    <ul class="navbar-nav teal darken-1 flex-grow-1">
+                        <!-- Dropdown for Home Page -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-home"></i> Home Page
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">
+                                        <i class="fas fa-home"></i> Home Page
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="News" asp-action="Index">
+                                        <i class="fas fa-newspaper"></i> News
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Page" asp-action="Index">
+                                        <i class="fas fa-file-alt"></i> Pages
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                        <i class="fas fa-lock"></i> Privacy
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown for Cards and Type of Cards -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="cardsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-credit-card"></i> Cards
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="cardsDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Card" asp-action="Index">
+                                        <i class="fas fa-credit-card"></i> Cards
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="CardType" asp-action="Index">
+                                        <i class="fas fa-id-card"></i> Type of Cards
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown for Accounts, Clients, Transactions -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="accountsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-university"></i> Accounts
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="accountsDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Index">
+                                        <i class="fas fa-university"></i> Accounts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Client" asp-action="Index">
+                                        <i class="fas fa-user"></i> Clients
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Transaction" asp-action="Index">
+                                        <i class="fas fa-exchange-alt"></i> Transactions
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown for Products and Customer Products -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-box"></i> Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="BankProduct" asp-action="Index">
+                                        <i class="fas fa-box"></i> Products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="ClientBankProduct" asp-action="Index">
+                                        <i class="fas fa-tools"></i> Customer Products
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Other Menu Items -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Branch" asp-action="Index">
+                                <i class="fas fa-building"></i> Branches
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Index">
+                                <i class="fas fa-user-tie"></i> Employees
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Notification" asp-action="Index">
+                                <i class="fas fa-bell"></i> Notifications
+                            </a>
+                        </li>
+
+                        <!-- New Pages Sections Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="pagesSectionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-pager"></i> Pages Sections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesSectionsDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="AboutPageSection" asp-action="Index">
+                                        <i class="fas fa-info-circle"></i> About Page Section
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="ContactPageSection" asp-action="Index">
+                                        <i class="fas fa-phone-alt"></i> Contact Page Section
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="PolicyPageSection" asp-action="Index">
+                                        <i class="fas fa-gavel"></i> Policy Page Section
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            Bank DOBRY START &copy; 2024   •••   <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                <i class="fas fa-lock"></i> Privacy
+            </a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

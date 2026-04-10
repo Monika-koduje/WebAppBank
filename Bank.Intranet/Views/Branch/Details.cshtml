@@ -1,0 +1,78 @@
+﻿@model Company.Data.Data.Branch
+
+@{
+    ViewData["Title"] = "Branch Details";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-university"></i> Branch Details
+    </h1>
+    <p class="lead">Here are the details of the branch.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-info-circle"></i> Branch Information
+            </h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <!-- Branch Name -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-building"></i> @Html.DisplayNameFor(model => model.BranchName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.BranchName)
+                </dd>
+
+                <!-- Address -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-map-marker-alt"></i> @Html.DisplayNameFor(model => model.Address)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <!-- City -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-city"></i> @Html.DisplayNameFor(model => model.City)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+
+                <!-- Postal Code -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-postal-code"></i> @Html.DisplayNameFor(model => model.PostalCode)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PostalCode)
+                </dd>
+
+                <!-- Phone -->
+                <dt class="col-sm-2">
+                    <i class="fas fa-phone-alt"></i> @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+        <a asp-action="Edit" asp-route-id="@Model?.IdBranch" class="btn-warning">
+            <i class="fas fa-edit"></i> Edit
+        </a> 
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

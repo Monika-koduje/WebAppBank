@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Company.Data.Data.CMS.News>
+
+@{
+    ViewData["Title"] = "News";
+}
+
+<div class="container">
+    <h1 class="header center indigo-text text-darken-3" id="News">Nowości</h1>
+    <div class="row center">
+        <h5>
+            Data modyfikacji: @DateTime.Now.ToString()
+        </h5>
+        <h5 class="grey-text text-darken-1 center">Bądź na bieżąco z najnowszymi informacjami i wydarzeniami.</h5>
+    </div>
+</div>
+
+    <!-- News Section -->
+    <div class="section sec">
+        <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <!-- News 1 -->
+                <div class="col s12 m4">
+                    <div class="card-panel center hoverable z-depth-3">
+                    <img src="@item.LinkTitle" class="responsive-img img4" />
+                        <h5>@item.Title</h5>
+                        <p>@item.Content</p>
+                    </div>
+            </div>
+            }
+        }
+        </div>
+    </div>
+

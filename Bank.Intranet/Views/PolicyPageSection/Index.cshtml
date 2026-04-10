@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Company.Data.Data.PolicyPageSection>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="m-0">Policy Page Sections</h1>
+        <p class="mb-0">
+            <!-- Wyśrodkowany przycisk do tworzenia -->
+            <a class="btn btn-primary" asp-action="Create">
+                <i class="fas fa-plus-circle"></i> 
+            </a>
+        </p>
+    </div>
+
+    <!-- Tabela -->
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SectionName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Content)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IconClass)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SectionName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Content)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImageUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IconClass)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsActive)
+                    </td>
+                    <td class="text-center">
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">
+                            <i class="fas fa-edit"></i> 
+                        </a>
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">
+                            <i class="fas fa-eye"></i> 
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete this section?');">
+                            <i class="fas fa-trash-alt"></i> 
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+<!-- Sekcja z obrazkiem -->
+<section class="image">
+    <img src="~/img/img18.jpg" />
+</section>
+
+<!-- Sekcja z ikonami -->
+<section class="icons-section">
+    <!-- Ikony dla różnych sekcji -->
+    <a class="icon-link" asp-area="" asp-controller="AboutPageSection" asp-action="Index" title="About Page Section">
+        <i class="fas fa-info-circle"></i>
+    </a>
+    <a class="icon-link" asp-area="" asp-controller="ContactPageSection" asp-action="Index" title="Contact Page Section">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

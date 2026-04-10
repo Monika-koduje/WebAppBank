@@ -1,0 +1,98 @@
+﻿@model Company.Data.Data.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-user-tie"></i> Create Employee
+    </h1>
+    <p class="lead">Fill out the form below to add a new employee to the system.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-plus-circle"></i> Add New Employee
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- First Name -->
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label">
+                        <i class="fas fa-user"></i> @Html.DisplayNameFor(model => model.FirstName)
+                    </label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label">
+                        <i class="fas fa-user"></i> @Html.DisplayNameFor(model => model.LastName)
+                    </label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <!-- Position -->
+                <div class="form-group">
+                    <label asp-for="Position" class="control-label">
+                        <i class="fas fa-briefcase"></i> @Html.DisplayNameFor(model => model.Position)
+                    </label>
+                    <input asp-for="Position" class="form-control" />
+                    <span asp-validation-for="Position" class="text-danger"></span>
+                </div>
+
+                <!-- Hire Date -->
+                <div class="form-group">
+                    <label asp-for="HireDate" class="control-label">
+                        <i class="fas fa-calendar-alt"></i> @Html.DisplayNameFor(model => model.HireDate)
+                    </label>
+                    <input asp-for="HireDate" class="form-control" />
+                    <span asp-validation-for="HireDate" class="text-danger"></span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label">
+                        <i class="fas fa-phone-alt"></i> @Html.DisplayNameFor(model => model.Phone)
+                    </label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+                <!-- Branch Selection -->
+                <div class="form-group">
+                    <label asp-for="IdBranch" class="control-label">
+                        <i class="fas fa-building"></i> @Html.DisplayNameFor(model => model.IdBranch)
+                    </label>
+                    <select asp-for="IdBranch" class="form-control" asp-items="ViewBag.IdBranch"></select>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to List Link -->
+    <div class="mt-3">
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

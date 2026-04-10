@@ -1,0 +1,77 @@
+﻿@model Company.Data.Data.Notification
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+    <div class="container mt-5">
+        <h1 class="text-primary">
+            <i class="fas fa-bell"></i> Create Notification
+        </h1>
+        <p class="lead">Fill out the form below to create a new notification.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-plus-circle"></i> Add New Notification
+                </h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <!-- Title -->
+                    <div class="form-group">
+                        <label asp-for="Title" class="control-label">
+                            <i class="fas fa-heading"></i> @Html.DisplayNameFor(model => model.Title)
+                        </label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label asp-for="Message" class="control-label">
+                            <i class="fas fa-comment"></i> @Html.DisplayNameFor(model => model.Message)
+                        </label>
+                        <textarea asp-for="Message" class="form-control" rows="4"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+
+                    <!-- Notification Date -->
+                    <div class="form-group">
+                        <label asp-for="NotificationDate" class="control-label">
+                            <i class="fas fa-calendar-alt"></i> @Html.DisplayNameFor(model => model.NotificationDate)
+                        </label>
+                        <input asp-for="NotificationDate" class="form-control" />
+                        <span asp-validation-for="NotificationDate" class="text-danger"></span>
+                    </div>
+
+                    <!-- Client Dropdown -->
+                    <div class="form-group">
+                        <label asp-for="IdClient" class="control-label">
+                            <i class="fas fa-users"></i> @Html.DisplayNameFor(model => model.IdClient)
+                        </label>
+                        <select asp-for="IdClient" class="form-control" asp-items="ViewBag.IdClient"></select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Back to List Link -->
+        <div class="mt-3">
+            <a asp-action="Index" class="btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

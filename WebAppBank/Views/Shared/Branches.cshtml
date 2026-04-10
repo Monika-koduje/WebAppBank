@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Company.Data.Data.Branch>
+
+@{
+    ViewData["Title"] = "Branches";
+}
+
+<div class="container">
+    <h1 class="header center indigo-text text-darken-3" id="Branches">Nasze Odziały</h1>
+    <div class="row center">
+        <h5>
+            Data modyfikacji: @DateTime.Now.ToString("dd-MM-yyyy HH:mm")
+        </h5>
+        <h6 class="grey-text text-darken-1 center">W razie potrzeby jesteśmy otwarci w wielu placówkach.</h6>
+    </div>
+</div>
+
+<!-- Branches Section -->
+<div class="section sec">
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable z-depth-4" style="background-color: #f3f3f3; border-radius: 10px; padding: 20px;">
+                        <div class="card-content">
+                            <!-- Ikona reprezentująca oddział -->
+                            <div class="center">
+                                <i class="fas fa-building fa-4x indigo-text text-darken-3"></i> <!-- Ikona budynku-->
+                            </div>
+                            <span class="card-title indigo-text text-darken-4" style="font-size: 1.5rem; font-weight: bold;">@item.BranchName</span>
+                            <p style="font-size: 1rem; color: #555;"><i class="fas fa-map-marker-alt"></i> @item.Address</p>
+                            <p style="font-size: 1rem; color: #555;"><i class="fas fa-city"></i> @item.City</p>
+                            <p style="font-size: 1rem; color: #555;"><i class="fas fa-phone"></i> @item.Phone</p>
+                        </div>
+                        <div class="card-action center">
+                            <!-- Przycisk z animacją -->
+                            <a href="tel:@item.Phone" class="btn-small indigo lighten-1 waves-effect waves-light hoverable">Zadzwoń</a>
+                            <a href="#" class="btn-small grey lighten-1 waves-effect waves-light hoverable">Więcej</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel yellow lighten-4">
+                    <p class="center grey-text text-darken-2">Brak dostępnych oddziałów do wyświetlenia.</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Add Font Awesome and Materialize CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

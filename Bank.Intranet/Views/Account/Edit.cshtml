@@ -1,0 +1,77 @@
+﻿@model Company.Data.Data.Account
+
+@{
+    ViewData["Title"] = "Edit Account";
+}
+
+<!-- Sekcja z tabelą z ograniczoną szerokością -->
+<section class="table-section">
+
+<div class="container mt-5">
+    <h1 class="text-primary">
+        <i class="fas fa-edit"></i> Edit Account
+    </h1>
+    <p class="lead">Modify the details of your account.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-warning text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-pencil-alt"></i> Edit Account Information
+            </h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdAccount" />
+
+                <div class="form-group">
+                    <label asp-for="AccountNumber" class="control-label">
+                        <i class="fas fa-credit-card"></i> @Html.DisplayNameFor(model => model.AccountNumber)
+                    </label>
+                    <input asp-for="AccountNumber" class="form-control" />
+                    <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Balance" class="control-label">
+                        <i class="fas fa-dollar-sign"></i> @Html.DisplayNameFor(model => model.Balance)
+                    </label>
+                    <input asp-for="Balance" class="form-control" />
+                    <span asp-validation-for="Balance" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="IdClient" class="control-label">
+                        <i class="fas fa-user"></i> @Html.DisplayNameFor(model => model.IdClient)
+                    </label>
+                    <select asp-for="IdClient" class="form-control" asp-items="ViewBag.IdClient">
+                        <option value="">Select Client</option>
+                    </select>
+                    <span asp-validation-for="IdClient" class="text-danger"></span>
+                </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
