@@ -19,9 +19,9 @@ The public-facing part of the system serves as a banking information portal for 
 - Simple navigation system
 - Clean public-facing UI
 
-<img width="1896" height="863" alt="Zrzut ekranu 2026-07-01 225451" src="https://github.com/user-attachments/assets/ad135b3c-4738-4783-80c3-38ebe79bfb80" />
-<img width="1908" height="900" alt="Zrzut ekranu 2026-07-01 225507" src="https://github.com/user-attachments/assets/c0bdadf4-6126-4f04-87c4-51bf21bd53d1" />
-<img width="1897" height="897" alt="Zrzut ekranu 2026-07-01 225435" src="https://github.com/user-attachments/assets/57ff7652-0db7-40f3-ae94-86e47f69263d" />
+<img width="1896" height="863" alt="Zrzut ekranu 2026-07-01 225451" src="https://github.com/user-attachments/assets/ad135b3c-4738-4783-80c3-38ebe79bfb80" />  
+<img width="1908" height="900" alt="Zrzut ekranu 2026-07-01 225507" src="https://github.com/user-attachments/assets/c0bdadf4-6126-4f04-87c4-51bf21bd53d1" />  
+<img width="1897" height="897" alt="Zrzut ekranu 2026-07-01 225435" src="https://github.com/user-attachments/assets/57ff7652-0db7-40f3-ae94-86e47f69263d" />  
 
 ---
 
