@@ -51,10 +51,10 @@ The internal system is designed for managing content published on the public por
 
 ## Technology Stack
 
-- ASP.NET (C#)
-- MVC / Razor Pages architecture
-- HTML5, CSS3, JavaScript
-- Visual Studio solution structure
+    ASP.NET (C#)
+    MVC / Razor Pages architecture
+    HTML5, CSS3, JavaScript
+    Visual Studio solution structure
 
 ---
 
