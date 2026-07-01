@@ -18,7 +18,7 @@ The public-facing part of the system serves as a banking information portal for 
 - Article details view
 - Simple navigation system
 - Clean public-facing UI
-- 
+  
 ### Application preview:
 <img width="1896" height="863" alt="Zrzut ekranu 2026-07-01 225451" src="https://github.com/user-attachments/assets/ad135b3c-4738-4783-80c3-38ebe79bfb80" />  
 <br><br>
