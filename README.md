@@ -18,11 +18,12 @@ The public-facing part of the system serves as a banking information portal for 
 - Article details view
 - Simple navigation system
 - Clean public-facing UI
-
+- 
+### Application preview
 <img width="1896" height="863" alt="Zrzut ekranu 2026-07-01 225451" src="https://github.com/user-attachments/assets/ad135b3c-4738-4783-80c3-38ebe79bfb80" />  
-
+<br><br>
 <img width="1908" height="900" alt="Zrzut ekranu 2026-07-01 225507" src="https://github.com/user-attachments/assets/c0bdadf4-6126-4f04-87c4-51bf21bd53d1" />  
-
+<br><br>
 <img width="1897" height="897" alt="Zrzut ekranu 2026-07-01 225435" src="https://github.com/user-attachments/assets/57ff7652-0db7-40f3-ae94-86e47f69263d" />  
 
 ---
@@ -34,6 +35,17 @@ The internal system is designed for managing content published on the public por
 ### Features:
 - Create, edit, and delete articles
 - Content management dashboard
+
+### Application preview
+<img width="1908" height="907" alt="Zrzut ekranu 2026-07-01 232008" src="https://github.com/user-attachments/assets/c9381046-c570-4d3c-8c36-0b6133f39c20" />
+<br><br>
+<img width="1895" height="902" alt="Zrzut ekranu 2026-07-01 232029" src="https://github.com/user-attachments/assets/aeb1fcde-d9fc-4926-be08-5e14212354df" />
+<br><br>
+<img width="1907" height="902" alt="Zrzut ekranu 2026-07-01 232224" src="https://github.com/user-attachments/assets/7d81806f-c4c1-48a0-bc11-2005a637ca8c" />
+<br><br>
+<img width="1907" height="893" alt="Zrzut ekranu 2026-07-01 232348" src="https://github.com/user-attachments/assets/b411852d-3a9c-429b-9067-eba6f451401b" />
+<br><br>
+<img width="1905" height="897" alt="Zrzut ekranu 2026-07-01 233221" src="https://github.com/user-attachments/assets/c01c289c-adc0-462c-9e59-526026fe3fa3" />
 
 ---
 
